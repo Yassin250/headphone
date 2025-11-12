@@ -1,0 +1,63 @@
+footer {
+  background-color: rgb(7, 22, 41); /* dark footer background */
+  color: white;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between; /* logo left, icons right */
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  flex-wrap: wrap; /* ensures responsiveness */
+  gap: 15px;
+}
+
+.footer-log {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* space between logo image and text */
+}
+
+.footer-log img {
+  width: 50px;
+  height: 50px;
+}
+
+.footer-log h1 {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 20px; /* space between social icons */
+}
+
+.footer-icons img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.footer-icons img:hover {
+  transform: scale(1.2);
+}
+
+.footer-copy {
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-log,
+  .footer-icons {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,120 @@
+.result {
+  background-image: url("../image/back.png");
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.result::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    rgba(4, 21, 42, 0.5)
+  );
+  z-index: 1;
+}
+
+.result-overlay {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.result-overlay h2 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+.result-overlay p {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 40px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.stat {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.stat:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 6px 30px rgba(255, 255, 255, 0.3);
+}
+
+.stat h3 {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0;
+}
+
+.stat p {
+  font-size: 0.95rem;
+  color: #f0f0f0;
+  margin-top: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .result-overlay h2 {
+    font-size: 2rem;
+  }
+
+  .result-overlay p {
+    font-size: 1rem;
+  }
+
+  .stat {
+    width: 120px;
+    height: 120px;
+  }
+
+  .stat h3 {
+    font-size: 1.5rem;
+  }
+
+  .stat p {
+    font-size: 0.8rem;
+  }
+}

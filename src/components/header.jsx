@@ -1,7 +1,7 @@
 import React from "react";
 import log from "../image/music.png";
 import background from "../image/1.jpeg";
-import "./header.css";
+import "./header.css"; 
 
 export default function Header() {
     return (
